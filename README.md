@@ -28,6 +28,33 @@ The code is written for the Arduino IDE and requires the following standard ESP3
 Before uploading the code to your ESP32, update the following variables in the `.ino` file:
 
 1. **Wi-Fi Settings:**
+   
    ```cpp
-   const char* ssid = "YOUR_WIFI_SSID";
-   const char* password = "YOUR_WIFI_PASSWORD";
+   const char* ssid = "ssid";
+   const char* password = "password";
+3. **Admin Credentials: (Required to access the control panel)**
+
+   ```cpp
+   const char* adminUser = "adminlogin"; 
+   const char* adminPass = "adminpass";
+
+## Usage
+
+Once the ESP32 is powered on, open the Serial Monitor (115200 baud) to find its IP address.
+Main Page (User Access)
+
+    URL: http://<ESP32_IP_ADDRESS>/
+
+    Default Login: admin 
+
+    Default Password: 12345678 
+
+    Click the "Відчинити двері" (Open Door) button to trigger the relay for 1 second.
+
+Admin Panel (Credential Management)
+
+    URL: http://<ESP32_IP_ADDRESS>/admin 
+
+    Login/Password: Use the hardcoded adminUser and adminPass.
+
+    Use the form to enter a new login and password for regular users. Once saved, these details are stored in the flash memory.
