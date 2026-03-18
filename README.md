@@ -1,2 +1,1 @@
-# Door-opener-by-esp32
-Code for the ESP32. It runs a server hosting a website that includes a button to open the door (triggered by pin 13), as well as a login and password for regular users, and an admin panel where you can change the password.
+This is code for the ESP32 that allows you to run a web server on it. The website is password-protected, and on the site itself there is a single large button that sends a signal to pin 13. A key with a radio signal from the door’s magnetic lock is soldered to pin 13. If you wish, you can also go to the website at ip/admin, where you’ll have your own username and password, and in this admin panel you can change the password.
